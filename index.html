@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Baidurja Biswas | Portfolio</title>
-    <meta name="description" content="Portfolio of Baidurja Biswas, PGDM student focused on analytics, marketing, operations, and management.">
+    <title>Baidurja Biswas | Professional Portfolio</title>
+    <meta name="description" content="Portfolio of Baidurja Biswas, PGDM Candidate at Great Lakes Institute of Management focusing on Analytics, Operations, Marketing, and Financial Strategy.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -13,34 +16,61 @@
         <span class="brand-mark">BB</span>
         <span>Baidurja Biswas</span>
       </a>
-      <nav class="nav" aria-label="Primary navigation">
+
+      <nav class="nav" id="primary-nav" aria-label="Primary navigation">
         <a href="#now">Current</a>
         <a href="#work">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#certifications">Certifications</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
+
+      <div class="header-controls">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch dark or light mode">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
     </header>
 
     <main>
+      <!-- Hero Section -->
       <section class="fade-in hero" id="home">
         <div class="hero-backdrop" aria-hidden="true"></div>
         <div class="hero-copy">
           <p class="eyebrow">PGDM Candidate | Great Lakes Institute of Management</p>
           <h1>Baidurja Biswas</h1>
           <p class="lead">
-            Currently pursuing PGDM at Great Lakes Institute of Management, Gurgaon, with hands-on exposure across operations,
+            Pursuing PGDM at Great Lakes Institute of Management, Gurgaon, with hands-on exposure across operations,
             marketing analytics, financial management, and data-driven business strategy.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="mailto:baidurjabiswas@gmail.com">Email Me</a>
-            <a class="button secondary" href="https://www.linkedin.com/in/baidurja-biswas-2213b9214" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="button primary" href="#contact">Contact Me</a>
+            <a class="button secondary" href="assets/Baidurja_Biswas_Resume.pdf" target="_blank" download="Baidurja_Biswas_Resume.pdf">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Download Resume
+            </a>
+            <a class="button secondary" href="https://www.linkedin.com/in/baidurja-biswas-2213b9214" target="_blank" rel="noreferrer">LinkedIn Profile</a>
           </div>
           <div class="hero-metrics" aria-label="Profile highlights">
-            <span><strong>PGDM</strong> 2025-2027</span>
-            <span><strong>Projects</strong> Operations, finance, marketing</span>
-            <span><strong>Analytics</strong> Python, SQL, Tableau</span>
+            <span><strong>PGDM</strong> 2025–2027</span>
+            <span><strong>Projects</strong> Operations, Finance, Marketing</span>
+            <span><strong>Analytics</strong> Python, SQL, Tableau, JMP</span>
           </div>
         </div>
         <aside class="photo-panel" aria-label="Profile photo area">
@@ -48,6 +78,7 @@
         </aside>
       </section>
 
+      <!-- Current Focus Section -->
       <section class="fade-in current-band" id="now">
         <div class="section-heading">
           <p class="eyebrow">01 | Current Focus</p>
@@ -55,65 +86,67 @@
         </div>
         <div class="current-grid">
           <article>
-            <span class="number">2025-2027</span>
+            <span class="number">2025–2027</span>
             <h3>PGDM, Great Lakes Gurgaon</h3>
             <p>Developing management depth while connecting analytical thinking with marketing, operations, and business growth.</p>
           </article>
           <article>
             <span class="number">2026</span>
             <h3>Summer Internship, Spark Minda</h3>
-            <p>Recent operations exposure in Pune, strengthening process orientation and cross-functional business understanding.</p>
+            <p>Operations exposure in Pune, strengthening process orientation, inventory optimization, and cross-functional business understanding.</p>
           </article>
           <article>
             <span class="number">Now</span>
             <h3>Branding and Admission Committee</h3>
-            <p>Contributing to branding and admissions initiatives at Great Lakes Gurgaon, combining communication with execution.</p>
+            <p>Contributing to branding and admissions initiatives at Great Lakes Gurgaon, combining strategic communication with execution.</p>
           </article>
         </div>
       </section>
 
+      <!-- Experience Section -->
       <section class="fade-in split-section" id="work">
         <div class="section-heading sticky-heading">
           <p class="eyebrow">02 | Experience</p>
           <h2>Experience</h2>
           <p>
-            A diverse portfolio spanning operations, process improvement, and data analytics, complemented by active engagement in business management and financial strategy.
+            A diverse background spanning operations, process optimization, and data analytics, complemented by active engagement in business management and financial strategy.
           </p>
         </div>
         <div class="timeline">
           <article class="timeline-item featured">
-            <span class="date">Apr 2026 - Jun 2026</span>
+            <span class="date">Apr 2026 – Jun 2026</span>
             <h3>Summer Internship, Spark Minda</h3>
             <p class="meta">Spark Minda | Pune District, Maharashtra</p>
-            <p>Worked on production flow mapping, bottleneck analysis, safety stock planning, and OEE monitoring in a manufacturing-led business environment.</p>
+            <p>Worked on production flow mapping, bottleneck analysis, safety stock planning, and Excel-based OEE monitoring in a manufacturing-led business environment.</p>
           </article>
           <article class="timeline-item featured">
-            <span class="date">Jul 2025 - Present</span>
+            <span class="date">Jul 2025 – Present</span>
             <h3>Member, Branding and Admission Committee</h3>
             <p class="meta">Great Lakes Institute of Management Gurgaon</p>
-            <p>Supports committee-led branding and admissions initiatives while pursuing PGDM.</p>
+            <p>Supports committee-led branding, outreach, and admissions initiatives while pursuing PGDM degree.</p>
           </article>
           <article class="timeline-item">
-            <span class="date">Apr 2024 - Oct 2024</span>
+            <span class="date">Apr 2024 – Oct 2024</span>
             <h3>Student Trainee, MSAT Upstream</h3>
             <p class="meta">Intas Pharmaceuticals | Ahmedabad</p>
             <p>Worked on cell culture, aseptic practices, documentation, laboratory protocols, and quantitative analysis of cell culture data.</p>
           </article>
           <article class="timeline-item">
-            <span class="date">Aug 2023 - Jul 2024</span>
+            <span class="date">Aug 2023 – Jul 2024</span>
             <h3>Undergraduate Researcher</h3>
             <p class="meta">Manipal Institute of Technology</p>
             <p>Optimized EPS fermentation media using statistical design approaches and characterized samples using AFM, SEM, and XRD.</p>
           </article>
           <article class="timeline-item compact">
-            <span class="date">2022 - 2023</span>
+            <span class="date">2022 – 2023</span>
             <h3>Earlier Training</h3>
-            <p class="meta">Calcutta School of Tropical Medicine and Rapture Biotech</p>
+            <p class="meta">Calcutta School of Tropical Medicine & Rapture Biotech</p>
             <p>Completed short-term training across biochemical analysis, laboratory machines, pharmaceutical QC, food QC, and clinical microbiology.</p>
           </article>
         </div>
       </section>
 
+      <!-- Projects Showcase Section -->
       <section class="fade-in projects-section" id="projects">
         <div class="section-heading">
           <p class="eyebrow">03 | Projects</p>
@@ -122,8 +155,27 @@
             Projects showcase hands-on experience in operations, marketing, and finance, highlighting data-driven approaches to solving complex business problems.
           </p>
         </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="projects-controls">
+          <div class="filter-pills">
+            <button type="button" class="filter-pill active" data-filter="all">All Projects</button>
+            <button type="button" class="filter-pill" data-filter="operations">Operations</button>
+            <button type="button" class="filter-pill" data-filter="finance">Finance</button>
+            <button type="button" class="filter-pill" data-filter="marketing">Marketing</button>
+            <button type="button" class="filter-pill" data-filter="research">Research</button>
+          </div>
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="project-search" placeholder="Search by tool, method, or keyword (e.g., OEE, CAPM, Creta)..." aria-label="Search projects">
+          </div>
+        </div>
+
         <div class="project-showcase">
-          <a class="project-card featured-project operations-project" href="spark-minda-project.html" aria-label="Open Spark Minda project detail page">
+          <a class="project-card featured-project operations-project" data-category="operations" href="spark-minda-project.html" aria-label="Open Spark Minda project detail page">
             <div class="project-topline">
               <span class="number">Summer Internship Project</span>
               <span class="project-type">View Case Study</span>
@@ -141,18 +193,18 @@
               <span>DBR scheduling</span>
               <span>Excel reporting</span>
             </div>
-            <span class="project-link">Open project page</span>
+            <span class="project-link">Open full case study</span>
           </a>
-          <a class="project-card business-project finance-project" href="cost-of-capital-project.html" aria-label="Open Cost of Capital project detail page">
+
+          <a class="project-card business-project finance-project" data-category="finance" href="cost-of-capital-project.html" aria-label="Open Cost of Capital project detail page">
             <div class="project-topline">
               <span class="number">Financial Management</span>
               <span class="project-type">View Case Study</span>
             </div>
             <h3>Cost of Capital Analysis of Telecom Sector Companies</h3>
             <p>
-              Analyzed the cost of capital for Indus Towers, Sterlite Technologies, and Tejas Networks by estimating Cost of Equity using CAPM,
-              Cost of Debt, and Weighted Average Cost of Capital. Compared capital structures and financing strategies to assess investment
-              attractiveness across the telecom infrastructure sector.
+              Analyzed cost of capital for Indus Towers, Sterlite Technologies, and Tejas Networks by estimating Cost of Equity using CAPM,
+              Cost of Debt, and Weighted Average Cost of Capital (WACC). Compared capital structures and financing strategies across the sector.
             </p>
             <div class="project-tags" aria-label="Project tools and methods">
               <span>CAPM</span>
@@ -162,17 +214,18 @@
               <span>Capital structure</span>
               <span>Telecom infrastructure</span>
             </div>
-            <span class="project-link">Open project page</span>
+            <span class="project-link">Open full case study</span>
           </a>
-          <a class="project-card business-project marketing-project" href="hyundai-creta-project.html" aria-label="Open Hyundai Creta marketing project detail page">
+
+          <a class="project-card business-project marketing-project" data-category="marketing" href="hyundai-creta-project.html" aria-label="Open Hyundai Creta marketing project detail page">
             <div class="project-topline">
               <span class="number">Marketing Management</span>
               <span class="project-type">View Case Study</span>
             </div>
             <h3>Marketing Analysis of Hyundai Creta</h3>
             <p>
-              Conducted a market research study on Hyundai Creta using primary data from customers and dealers. Applied PESTEL, Porter's Five
-              Forces, competitor analysis, and STP framework to evaluate positioning and develop recommendations for the mid-size SUV segment.
+              Conducted market research study on Hyundai Creta using primary data from customers and dealers. Applied PESTEL, Porter's Five
+              Forces, competitor analysis, and STP framework to evaluate positioning and develop segment recommendations.
             </p>
             <div class="project-tags" aria-label="Project tools and methods">
               <span>Primary research</span>
@@ -182,17 +235,17 @@
               <span>STP</span>
               <span>Strategy recommendations</span>
             </div>
-            <span class="project-link">Open project page</span>
+            <span class="project-link">Open full case study</span>
           </a>
-          <article class="project-card research-project">
+
+          <article class="project-card research-project" data-category="research">
             <div class="project-topline">
-              <span class="number">Aug 2023 - Jul 2024</span>
-              <span class="project-type">Research Foundation</span>
+              <span class="number">Aug 2023 – Jul 2024</span>
+              <span class="project-type">Research Publication</span>
             </div>
-            <h3>Extraction, optimization, and characterization of bacterial EPS</h3>
+            <h3>Extraction, Optimization, and Characterization of Bacterial EPS</h3>
             <p>
-              Worked on extraction of exopolysaccharide from a bacterial strain, then optimized fermentation media to improve EPS yield.
-              Used statistical designs including Plackett-Burman Design and Central Composite Design with JMP software.
+              Extracted exopolysaccharide from a bacterial strain and optimized fermentation media to maximize EPS yield using statistical experimental design (Plackett-Burman Design and Central Composite Design with JMP software).
             </p>
             <div class="project-tags" aria-label="Project tools and methods">
               <span>Fermentation optimization</span>
@@ -203,11 +256,12 @@
               <span>SEM</span>
               <span>XRD</span>
             </div>
-            <a class="project-link" href="https://www.nature.com/articles/s41598-025-10392-5" target="_blank" rel="noreferrer">Read Nature article</a>
+            <a class="project-link" href="https://www.nature.com/articles/s41598-025-10392-5" target="_blank" rel="noreferrer">Read Nature Article</a>
           </article>
         </div>
       </section>
 
+      <!-- Skills Section -->
       <section class="fade-in skills-section" id="skills">
         <div class="section-heading">
           <p class="eyebrow">04 | Capabilities</p>
@@ -226,7 +280,7 @@
             </ul>
           </div>
           <div class="skill-card">
-            <h3>Operations and Management</h3>
+            <h3>Operations & Process</h3>
             <ul>
               <li>Process Optimization (OEE, DBR)</li>
               <li>Inventory Planning & Safety Stock</li>
@@ -236,7 +290,7 @@
             </ul>
           </div>
           <div class="skill-card">
-            <h3>Finance and Marketing</h3>
+            <h3>Finance & Strategy</h3>
             <ul>
               <li>Financial Analysis (CAPM, WACC)</li>
               <li>Corporate Finance</li>
@@ -248,6 +302,7 @@
         </div>
       </section>
 
+      <!-- Certifications Section -->
       <section class="fade-in certifications-section" id="certifications">
         <div class="section-heading">
           <p class="eyebrow">05 | Certifications</p>
@@ -255,9 +310,9 @@
         </div>
         <div class="certification-board">
           <article class="cert-feature">
-            <span>Selected Certifications</span>
-            <h3>Analytics, Python, and process improvement credentials.</h3>
-            <p>Advanced data analytics, Lean Six Sigma, and Python coursework supporting practical, data-led decision making.</p>
+            <span>Verified Credentials</span>
+            <h3>Analytics, Python, and Process Improvement</h3>
+            <p>Advanced data analytics, Lean Six Sigma, and management coursework supporting practical, data-led decision making.</p>
           </article>
           <div class="cert-list" aria-label="Certificate courses">
             <article>
@@ -271,68 +326,102 @@
               <span>02</span>
               <div>
                 <p>Process Improvement</p>
-                <h3><a href="https://leansixsigma.gtbharat.in/verify/7fbe1cb15219?s=true" target="_blank" rel="noreferrer">Lean Six Sigma</a></h3>
+                <h3><a href="https://leansixsigma.gtbharat.in/verify/7fbe1cb15219?s=true" target="_blank" rel="noreferrer">Lean Six Sigma Green Belt</a></h3>
               </div>
             </article>
             <article>
               <span>03</span>
               <div>
-                <p>Management</p>
-                <h3><a href="https://www.credly.com/badges/9d400e8c-75cb-4039-b70b-2aace9b1eaf1/public_url" target="_blank" rel="noreferrer">Mckinsey forward program</a></h3>
+                <p>Leadership & Strategy</p>
+                <h3><a href="https://www.credly.com/badges/9d400e8c-75cb-4039-b70b-2aace9b1eaf1/public_url" target="_blank" rel="noreferrer">McKinsey Forward Program</a></h3>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="fade-in education-section">
+      <!-- Education Section -->
+      <section class="fade-in education-section" id="education">
         <div class="section-heading">
           <p class="eyebrow">06 | Education</p>
           <h2>Academic background</h2>
         </div>
         <div class="education-list">
           <article>
-            <span>June 2025 - May 2027</span>
+            <span>June 2025 – May 2027</span>
             <h3>Post Graduate Diploma in Management</h3>
             <p>Great Lakes Institute of Management Gurgaon</p>
           </article>
           <article>
-            <span>2020 - 2024</span>
+            <span>2020 – 2024</span>
             <h3>B.Tech in Biotechnology</h3>
             <p>Manipal Institute of Technology | Minor in Environmental Biotechnology</p>
           </article>
           <article>
-            <span>2007 - 2020</span>
+            <span>2007 – 2020</span>
             <h3>Secondary and Higher Secondary</h3>
             <p>Green Point Academy, CBSE</p>
           </article>
         </div>
       </section>
 
+      <!-- Contact Section -->
       <section class="fade-in contact-section" id="contact">
         <div>
           <p class="eyebrow">Contact</p>
           <h2>Let's connect</h2>
-          <p>Interested in conversations around analytics, finance, and operations roles where data-driven decisions can support business growth.</p>
+          <p>Interested in conversations around analytics, finance, and operations roles where data-driven decisions support business growth.</p>
+          
+          <div class="contact-actions">
+            <button type="button" data-copy="baidurjabiswas@gmail.com" aria-label="Copy Email address">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copy Email: baidurjabiswas@gmail.com
+            </button>
+            <a href="https://wa.me/919083447833" target="_blank" rel="noreferrer" class="whatsapp-link">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              WhatsApp Message
+            </a>
+            <button type="button" data-copy="+919382881157" aria-label="Copy Phone number">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              Call: +91 93828 81157
+            </button>
+            <a href="https://www.linkedin.com/in/baidurja-biswas-2213b9214" target="_blank" rel="noreferrer">LinkedIn Profile</a>
+          </div>
         </div>
-        <div class="contact-actions">
-          <a href="mailto:baidurjabiswas@gmail.com">baidurjabiswas@gmail.com</a>
-          <a href="https://wa.me/919083447833" target="_blank" rel="noreferrer" class="whatsapp-link">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-            WhatsApp
-          </a>
-          <a href="tel:+919382881157">+91 93828 81157</a>
-          <a href="https://www.linkedin.com/in/baidurja-biswas-2213b9214" target="_blank" rel="noreferrer">LinkedIn Profile</a>
+
+        <div class="contact-form-card">
+          <h3>Send a Direct Message</h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="form-name">Your Name</label>
+              <input type="text" id="form-name" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label for="form-email">Your Email</label>
+              <input type="email" id="form-email" required placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" rows="4" required placeholder="Hello Baidurja, I'd like to discuss..."></textarea>
+            </div>
+            <button type="submit" class="form-submit-btn">Send Message</button>
+          </form>
         </div>
       </section>
     </main>
 
     <footer>
-      <span>From Asansol, West Bengal, India</span>
-      <span>Languages: Bengali, Hindi, English</span>
+      <span>Asansol, West Bengal, India</span>
+      <span>Languages: English, Hindi, Bengali</span>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
