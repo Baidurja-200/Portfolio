@@ -6,7 +6,6 @@
     <title>Spark Minda Project | Baidurja Biswas</title>
     <meta name="description" content="Project case study on optimizing inventory flow and OEE monitoring at Spark Minda Die Cast Plant, Pune.">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   </head>
   <body>
     <header class="site-header detail-header">
@@ -66,59 +65,66 @@
       <section class="case-section company-section" id="company">
         <div class="section-heading">
           <p class="eyebrow">Organization Profile</p>
-          <h2>About Spark Minda</h2>
-          <p>Key background on Minda Corporation Limited (Ashok Minda Group), a leading global Tier-1 automotive systems manufacturer, and its key production footprint.</p>
+          <h2>Company Overview</h2>
         </div>
 
-        <div class="company-layout-grid">
-          <div class="company-info-card">
-            <div class="company-logo-header">
-              <img src="assets/spark-minda/spark-minda-logo.png" alt="Spark Minda - Powered by Passion" class="spark-minda-cropped-logo">
-              <div class="header-badges-group">
-                <span class="company-badge primary">Est. 1958</span>
-                <span class="company-badge">Tier-1 OEM Supplier</span>
-                <span class="company-badge">B2C Minda Helmet</span>
-              </div>
+        <div class="company-overview-container">
+          <div class="company-header-card">
+            <div class="company-logo-wrap">
+              <img src="assets/spark-minda/spark-minda-logo.png" alt="Spark Minda - Powered by Passion Logo" class="company-main-logo">
+              <span class="company-badge">Est. 1958 | Automotive OEM & B2C</span>
             </div>
-
-            <p class="company-desc">
-              <strong>Spark Minda</strong> (Minda Corporation Limited) was established in <strong>1958</strong> by <em>Shadi Lal Minda</em> and stands as a major Tier-1 automotive OEM system supplier. In <strong>2022</strong>, the group entered the B2C consumer market with the launch of <strong>"Minda Helmet"</strong>.
-            </p>
-
-            <div class="company-highlights-list">
-              <div class="company-highlight-item">
-                <span class="highlight-title">Core Products</span>
-                <p>Car door locksets, die-cast components (GDC & LPDC), starter motors, instrument clusters, sensors, wiring harnesses, EV components, and smart mobility.</p>
-              </div>
-              <div class="company-highlight-item">
-                <span class="highlight-title">Geographical Presence</span>
-                <p><strong>14 Plants</strong> in North India &bull; <strong>13 Plants</strong> in West India &bull; <strong>4 Plants</strong> in South India &bull; <strong>3 Plants</strong> in ASEAN &bull; <strong>1 Office</strong> in East Asia.</p>
-              </div>
-              <div class="company-highlight-item">
-                <span class="highlight-title">Major Clients & Die-Cast Parts</span>
-                <p><strong>OEMs:</strong> BMW, Audi, Hyundai, Mahindra, Piaggio. <br><strong>Die-Cast Components:</strong> T6 Lp Turbo Charger (BMW), 1.5L i-DTEC CH (Honda), CH 1.0L Diesel (Volvo Bus), CH 1.5L Diesel (Ford).</p>
-              </div>
+            
+            <div class="company-intro-text">
+              <p>
+                <strong>Spark Minda</strong> was established in <strong>1958</strong> by <em>Shadi Lal Minda</em> and operates primarily as a Tier-1 OEM system supplier for leading automotive companies. In <strong>2022</strong>, Spark Minda entered the consumer B2C market with the launch of <strong>"Minda Helmet"</strong>.
+              </p>
+              <p>
+                <strong>Major Portfolio:</strong> Car door locksets, die-cast components, starter motors, instrument clusters, sensors, wiring harnesses, EV components, and smart mobility solutions.
+              </p>
             </div>
           </div>
 
-          <div class="company-map-card">
-            <div class="map-card-header">
-              <div>
-                <h3>Manufacturing & Facility Map</h3>
-                <p>Interactive view of Spark Minda's industrial presence with internship site highlight</p>
+          <div class="company-cards-grid">
+            <div class="overview-column-card geo-card">
+              <div class="column-card-header">
+                <span class="column-icon">🌐</span>
+                <h3>Geographical Presence</h3>
               </div>
-              <div class="map-pills" aria-label="Map location selector">
-                <button class="map-pill active" data-lat="18.7604" data-lng="73.8617" data-zoom="12" data-name="Spark Minda Die Casting Division (Chakan, Pune)">Chakan Plant (Pune)</button>
-                <button class="map-pill" data-lat="28.5355" data-lng="77.3910" data-zoom="10" data-name="Spark Minda Corporate HQ (Noida, UP)">Corporate HQ</button>
-                <button class="map-pill" data-lat="12.9801" data-lng="80.0583" data-zoom="10" data-name="Spark Minda South Hub (Chennai, TN)">Chennai Hub</button>
+              <ul class="overview-list">
+                <li><span class="list-pin">📍</span> <strong>14 Plants</strong> in North India</li>
+                <li><span class="list-pin">📍</span> <strong>13 Plants</strong> in West India</li>
+                <li><span class="list-pin">📍</span> <strong>4 Plants</strong> in South India</li>
+                <li><span class="list-pin">📍</span> <strong>3 Plants</strong> in ASEAN Countries</li>
+                <li><span class="list-pin">📍</span> <strong>1 Office</strong> in East Asia</li>
+              </ul>
+            </div>
+
+            <div class="overview-column-card clients-card">
+              <div class="column-card-header">
+                <span class="column-icon">🤝</span>
+                <h3>Major Clients</h3>
+              </div>
+              <div class="clients-tag-grid">
+                <span class="client-pill">Piaggio</span>
+                <span class="client-pill">Hyundai</span>
+                <span class="client-pill">Mahindra</span>
+                <span class="client-pill">BMW</span>
+                <span class="client-pill">Audi</span>
               </div>
             </div>
 
-            <div id="spark-minda-map" class="map-stage" aria-label="Interactive map showing Spark Minda plant locations"></div>
-
-            <div class="map-footer-note">
-              <span class="pin-dot"></span>
-              <span><strong>Selected Location:</strong> Spark Minda Die Casting Division, MIDC Chakan, Khed, Pune, Maharashtra 410501</span>
+            <div class="overview-column-card components-card">
+              <div class="column-card-header">
+                <span class="column-icon">⚙️</span>
+                <h3>Major Die-Cast Components</h3>
+              </div>
+              <ul class="overview-list components-list">
+                <li><strong>T6 Lp Turbo Charger</strong> <span class="client-sub">Used by BMW</span></li>
+                <li><strong>1.5 Litre i-DTEC CH</strong> <span class="client-sub">Used in Honda</span></li>
+                <li><strong>CH 1.0 L Diesel</strong> <span class="client-sub">Used in Volvo Bus</span></li>
+                <li><strong>CH 1.5L Diesel</strong> <span class="client-sub">Used by Ford</span></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -434,7 +440,6 @@
         </div>
       </section>
     </main>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
