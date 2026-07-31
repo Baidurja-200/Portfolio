@@ -270,4 +270,72 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 1000);
     });
   }
+
+  // 11. Interactive Project Slideshow
+  const slideshowWrapper = document.getElementById('spark-slideshow');
+  if (slideshowWrapper) {
+    const slides = slideshowWrapper.querySelectorAll('.slide-item');
+    const dots = slideshowWrapper.querySelectorAll('.slide-dot');
+    const thumbs = slideshowWrapper.querySelectorAll('.thumb-item');
+    const prevBtn = slideshowWrapper.querySelector('.slide-arrow.prev');
+    const nextBtn = slideshowWrapper.querySelector('.slide-arrow.next');
+
+    let currentSlide = 0;
+    let autoSlideInterval = null;
+
+    const goToSlide = (n) => {
+      slides[currentSlide].classList.remove('active');
+      if (dots[currentSlide]) dots[currentSlide].classList.remove('active');
+      if (thumbs[currentSlide]) thumbs[currentSlide].classList.remove('active');
+
+      currentSlide = (n + slides.length) % slides.length;
+
+      slides[currentSlide].classList.add('active');
+      if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+      if (thumbs[currentSlide]) thumbs[currentSlide].classList.add('active');
+    };
+
+    const nextSlide = () => goToSlide(currentSlide + 1);
+    const prevSlide = () => goToSlide(currentSlide - 1);
+
+    if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); resetTimer(); });
+    if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); resetTimer(); });
+
+    dots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => {
+        goToSlide(idx);
+        resetTimer();
+      });
+    });
+
+    thumbs.forEach((thumb, idx) => {
+      thumb.addEventListener('click', () => {
+        goToSlide(idx);
+        resetTimer();
+      });
+    });
+
+    const startTimer = () => {
+      if (!autoSlideInterval) {
+        autoSlideInterval = setInterval(nextSlide, 4500);
+      }
+    };
+
+    const stopTimer = () => {
+      if (autoSlideInterval) {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = null;
+      }
+    };
+
+    const resetTimer = () => {
+      stopTimer();
+      startTimer();
+    };
+
+    slideshowWrapper.addEventListener('mouseenter', stopTimer);
+    slideshowWrapper.addEventListener('mouseleave', startTimer);
+
+    startTimer();
+  }
 });
