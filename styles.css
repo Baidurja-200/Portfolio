@@ -1709,3 +1709,175 @@ a.whatsapp-link svg {
     padding: 8px;
   }
 }
+
+/* Spark Minda Company Overview & Map Styles */
+.company-section {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.08), transparent 30rem),
+    linear-gradient(180deg, #f8fafc 0%, #eef5fb 100%);
+}
+
+.company-layout-grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.44fr) minmax(0, 0.56fr);
+  gap: 24px;
+  margin-top: 36px;
+  align-items: stretch;
+}
+
+.company-info-card,
+.company-map-card {
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(203, 213, 225, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 16px 45px rgba(15, 23, 42, 0.07);
+}
+
+.company-logo-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.spark-minda-logo-svg {
+  max-width: 220px;
+  height: auto;
+}
+
+.company-badge {
+  padding: 6px 12px;
+  color: #075985;
+  background: rgba(56, 189, 248, 0.14);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.company-desc {
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.company-highlights-list {
+  display: grid;
+  gap: 14px;
+}
+
+.company-highlight-item {
+  padding: 14px 16px;
+  background: #f8fafc;
+  border-left: 3px solid var(--cyan);
+  border-radius: 0 8px 8px 0;
+}
+
+.highlight-title {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.company-highlight-item p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.company-map-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.map-card-header {
+  margin-bottom: 16px;
+}
+
+.map-card-header h3 {
+  margin: 0 0 4px;
+  font-size: 1.2rem;
+}
+
+.map-card-header p {
+  margin: 0 0 12px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.map-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.map-pill {
+  padding: 6px 12px;
+  color: var(--muted);
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 750;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.map-pill:hover {
+  color: var(--ink);
+  background: #e2e8f0;
+}
+
+.map-pill.active {
+  color: var(--white);
+  background: linear-gradient(135deg, #0084c7, #0284c7);
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(0, 132, 199, 0.25);
+}
+
+.map-stage {
+  width: 100%;
+  height: 340px;
+  min-height: 300px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.map-footer-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 10px 14px;
+  background: #f8fafc;
+  border-radius: 6px;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+.pin-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e30613;
+  box-shadow: 0 0 8px rgba(227, 6, 19, 0.6);
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .company-layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
