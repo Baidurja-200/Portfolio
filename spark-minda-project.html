@@ -181,10 +181,10 @@
             </div>
             <h3>Components Covered</h3>
             <ul class="scope-bullets">
-              <li>Porsche Housing RH</li>
-              <li>Phinia 6 Cylinder</li>
-              <li>BorgWarner EAB RP</li>
-              <li>BorgWarner EAB LP</li>
+              <li>Porsche Housing RH (5,000 units/mo)</li>
+              <li>Phinia 6 Cylinder (3,600 units/mo)</li>
+              <li>BorgWarner EAD HP (6,000 units/mo)</li>
+              <li>BorgWarner EAD LP (6,000 units/mo)</li>
             </ul>
           </article>
 
@@ -198,10 +198,10 @@
             </div>
             <h3>Activities Performed</h3>
             <ul class="scope-bullets">
-              <li>Process flow mapping</li>
-              <li>Cycle & Lead time analysis</li>
-              <li>Bottleneck identification</li>
-              <li>Safety stock calculation</li>
+              <li>Process flow & TAKT time mapping</li>
+              <li>Cycle & cumulative lead time analysis</li>
+              <li>TOC bottleneck & capacity utilization</li>
+              <li>Recovery-based safety stock & DBR planning</li>
             </ul>
           </article>
         </div>
@@ -211,7 +211,7 @@
       <section class="case-section" id="inventory">
         <div class="section-heading">
           <p class="section-dash-eyebrow">— INVENTORY MATRIX</p>
-          <h2>Component Lead Times & Safety Stock</h2>
+          <h2>Component Lead Times & Safety Stock Summary</h2>
         </div>
 
         <div class="case-table-wrapper stitch-table-wrap">
@@ -221,33 +221,43 @@
                 <th>COMPONENT NAME</th>
                 <th>MONTHLY DEMAND</th>
                 <th>DAILY TARGET</th>
-                <th>SAFETY STOCK</th>
+                <th>STARTUP LEAD TIME</th>
+                <th>PRIMARY BOTTLENECK</th>
+                <th>CONTROL STRATEGY</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><strong>Porsche Housing RH</strong></td>
-                <td>4,500 units</td>
-                <td>180 units/day</td>
-                <td><span class="table-badge critical">Critical</span></td>
+                <td>5,000 units</td>
+                <td>192 units/day</td>
+                <td>44.71 hrs</td>
+                <td>T6 Heat Treatment (93% util)</td>
+                <td><span class="table-badge critical">Drum Buffer Rope</span></td>
               </tr>
               <tr>
                 <td><strong>Phinia 6 Cylinder</strong></td>
+                <td>3,600 units</td>
+                <td>138 units/day</td>
+                <td>29.80 hrs</td>
+                <td>OP 10 Machining (63% util)</td>
+                <td><span class="table-badge stable">Controlled WIP (506 units)</span></td>
+              </tr>
+              <tr>
+                <td><strong>BorgWarner EAD HP</strong></td>
                 <td>6,000 units</td>
-                <td>240 units/day</td>
-                <td><span class="table-badge stable">Stable</span></td>
+                <td>231 units/day</td>
+                <td>27.84 hrs</td>
+                <td>OP 50 & OP 30/40 (79% util)</td>
+                <td><span class="table-badge monitor">TOC Buffer (614 units)</span></td>
               </tr>
               <tr>
-                <td><strong>BorgWarner EAB RP</strong></td>
-                <td>4,000 units</td>
-                <td>160 units/day</td>
-                <td><span class="table-badge monitor">Monitor</span></td>
-              </tr>
-              <tr>
-                <td><strong>BorgWarner EAB LP</strong></td>
-                <td>4,000 units</td>
-                <td>160 units/day</td>
-                <td><span class="table-badge monitor">Monitor</span></td>
+                <td><strong>BorgWarner EAD LP</strong></td>
+                <td>6,000 units</td>
+                <td>231 units/day</td>
+                <td>30.67 hrs</td>
+                <td>OP 30/40 & OP 50 (73% util)</td>
+                <td><span class="table-badge monitor">TOC Buffer (671 units)</span></td>
               </tr>
             </tbody>
           </table>
@@ -258,16 +268,16 @@
       <section class="case-section dark-case stitch-dark-section" id="bottlenecks">
         <div class="section-heading">
           <p class="section-dash-eyebrow">— BOTTLENECK ANALYSIS</p>
-          <h2>Bottlenecks & Inventory Signals</h2>
+          <h2>Bottlenecks & Capacity Signals</h2>
         </div>
 
         <div class="stitch-signal-list">
           <!-- Signal 1: Critical -->
           <article class="stitch-signal-row critical">
             <div class="signal-row-left">
-              <span class="signal-badge-pill critical">CRITICAL</span>
-              <h3>Porsche Housing RH</h3>
-              <p>14 day Lead time, at <strong>93% utilization</strong>. This is the drum operation for the entire plant.</p>
+              <span class="signal-badge-pill critical">CRITICAL BOTTLENECK</span>
+              <h3>Porsche Housing RH — T6 Heat Treatment</h3>
+              <p>44.71 hrs startup lead time. T6 heat treatment operates at <strong>93% capacity utilization</strong> (104 pcs / 12 hrs). Acts as the primary drum constraint governing shop floor pace under TOC.</p>
             </div>
             <div class="signal-row-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2">
@@ -281,9 +291,9 @@
           <!-- Signal 2: Monitor -->
           <article class="stitch-signal-row monitor">
             <div class="signal-row-left">
-              <span class="signal-badge-pill monitor">MONITOR</span>
-              <h3>BorgWarner EAB LP</h3>
-              <p>OEE bottlenecking at <strong>73% utilization</strong>. Limited recovery margin for demand surges.</p>
+              <span class="signal-badge-pill monitor">HIGH LOAD / MONITOR</span>
+              <h3>BorgWarner EAD HP & EAD LP — OP 50 / OP 30/40</h3>
+              <p>27.84 hrs to 30.67 hrs lead time. High machine utilization (73% – 79%) causes temporary inventory buildup. Managed with 614–671 units recovery safety stock.</p>
             </div>
             <div class="signal-row-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f6b44b" stroke-width="2">
@@ -297,9 +307,9 @@
           <!-- Signal 3: Stable -->
           <article class="stitch-signal-row stable">
             <div class="signal-row-left">
-              <span class="signal-badge-pill stable">STABLE</span>
-              <h3>Phinia 6 Cylinder</h3>
-              <p>OP 10 machining managed at <strong>63% utilization</strong>. Stable operation within capacity.</p>
+              <span class="signal-badge-pill stable">PARALLEL MITIGATED</span>
+              <h3>Phinia 6 Cylinder — OP 10 Machining</h3>
+              <p>29.80 hrs lead time. OP 10 cycle time is 700s (63% utilization). Severe throughput bottlenecks are effectively mitigated due to parallel machine lines.</p>
             </div>
             <div class="signal-row-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" stroke-width="2">
@@ -321,32 +331,32 @@
           <article class="stitch-step-item">
             <div class="step-badge-node">01</div>
             <div class="step-body">
-              <h3>Receive Daily Data</h3>
-              <p>Collected breakdown metrics and efficiency figures from GDC and LPDC machine lines via shop floor supervisors.</p>
+              <h3>Shop Floor Data Capture</h3>
+              <p>Collected daily breakdown metrics, uptime logs, and cycle data across 4 GDC lines (Tilting, Daimler Robo, Tilting Robo, Stationary) and LPDC lines.</p>
             </div>
           </article>
 
           <article class="stitch-step-item">
             <div class="step-badge-node">02</div>
             <div class="step-body">
-              <h3>Clean and Verify</h3>
-              <p>Cross-checked discrepancies between operator logs and automated counters to ensure data integrity for OEE calculation.</p>
+              <h3>Data Cleaning & Operator Audit</h3>
+              <p>Cleaned data inconsistencies by cross-checking supervisor shift sheets with operator logs to establish reliable breakdown root cause categories.</p>
             </div>
           </article>
 
           <article class="stitch-step-item">
             <div class="step-badge-node">03</div>
             <div class="step-body">
-              <h3>Weekly Aggregation</h3>
-              <p>Used custom Excel templates and pivot tables to compute weekly totals for Availability, Performance, and Quality.</p>
+              <h3>Weekly Aggregation & Formulas</h3>
+              <p>Built Excel-based dynamic sheets calculating weekly Availability, Performance, Quality, and total OEE efficiency rates per machine line.</p>
             </div>
           </article>
 
           <article class="stitch-step-item">
             <div class="step-badge-node">04</div>
             <div class="step-body">
-              <h3>Dashboard & Charts</h3>
-              <p>Generated visual performance charts for plant managers to spot trends and assign resources to top bottleneck issues.</p>
+              <h3>Executive Insights & Maintenance Action</h3>
+              <p>Equipped plant management with breakdown Pareto charts to prioritize preventive maintenance, reducing unexpected production downtime.</p>
             </div>
           </article>
         </div>

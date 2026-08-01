@@ -944,6 +944,8 @@ section {
 
 .case-section {
   background: #f8fafc;
+  padding-top: clamp(28px, 3.5vw, 44px);
+  padding-bottom: clamp(28px, 3.5vw, 44px);
 }
 
 .case-section:nth-of-type(even):not(.dark-case) {
